@@ -548,23 +548,41 @@
   const modalTag = document.getElementById('modalTag');
   const modalLink = document.getElementById('modalLink');
 
-  function openVideo(title, tag, driveLink) {
-    // Extract file ID from Google Drive link
+  // img element for image modal
+  const modalImgEl = document.createElement('img');
+  modalImgEl.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#0a0908;display:none;';
+  document.querySelector('.modal-frame-wrap').appendChild(modalImgEl);
+
+  function openMedia(title, tag, driveLink, isImage) {
     const match = driveLink.match(/\/d\/([a-zA-Z0-9_-]+)/);
     if (!match) return;
     const fileId = match[1];
-    const embedUrl = `https://drive.google.com/file/d/${fileId}/preview`;
-    modalIframe.src = embedUrl;
     modalTitle.textContent = title;
     modalTag.textContent = tag;
     modalLink.href = driveLink;
+    if (isImage) {
+      modalIframe.style.display = 'none';
+      modalImgEl.src = 'https://lh3.googleusercontent.com/d/' + fileId;
+      modalImgEl.alt = title;
+      modalImgEl.style.display = 'block';
+    } else {
+      modalImgEl.style.display = 'none';
+      modalImgEl.src = '';
+      modalIframe.style.display = 'block';
+      modalIframe.src = 'https://drive.google.com/file/d/' + fileId + '/preview';
+    }
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
 
+  function openVideo(title, tag, driveLink) { openMedia(title, tag, driveLink, false); }
+
   function closeVideo() {
     modal.classList.remove('open');
     modalIframe.src = '';
+    modalIframe.style.display = 'block';
+    modalImgEl.src = '';
+    modalImgEl.style.display = 'none';
     document.body.style.overflow = '';
   }
 
@@ -778,8 +796,27 @@
         `;
         card.addEventListener('click', () => openVideo(w.title, w.tag, w.link));
         grid.appendChild(card);
+      } else if (w.img) {
+        // Image card — opens in modal
+        const card = document.createElement('div');
+        card.className = 'portfolio-card';
+        card.style.cursor = 'pointer';
+        card.style.animationDelay = `${i * 0.04}s`;
+        card.innerHTML = `
+          <img class="portfolio-card-img" src="${w.img}" alt="${w.title}" loading="lazy"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="portfolio-card-img-placeholder" style="display:none">
+            <span style="font-family:var(--mono);font-size:1.4rem;color:var(--muted)">${catIcon}</span>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-title">${w.title}</div>
+            <div class="portfolio-card-tag">${w.tag}</div>
+          </div>
+        `;
+        card.addEventListener('click', () => openMedia(w.title, w.tag, w.link, true));
+        grid.appendChild(card);
       } else {
-        // Image card or video with thumbnail — link out
+        // No image, no video — plain placeholder card linking out
         const card = document.createElement('a');
         card.className = 'portfolio-card';
         card.href = w.link || '#';
@@ -788,10 +825,9 @@
         card.style.textDecoration = 'none'; card.style.color = 'inherit';
         card.style.animationDelay = `${i * 0.04}s`;
         card.innerHTML = `
-          ${w.img
-            ? `<img class="portfolio-card-img" src="${w.img}" alt="${w.title}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" /><div class="portfolio-card-img-placeholder" style="display:none"><span style="font-family:var(--mono);font-size:1.4rem;color:var(--muted)">${catIcon}</span></div>`
-            : `<div class="portfolio-card-img-placeholder"><span style="font-family:var(--mono);font-size:1.4rem;color:var(--muted)">${catIcon}</span></div>`
-          }
+          <div class="portfolio-card-img-placeholder">
+            <span style="font-family:var(--mono);font-size:1.4rem;color:var(--muted)">${catIcon}</span>
+          </div>
           <div class="portfolio-card-body">
             <div class="portfolio-card-title">${w.title}</div>
             <div class="portfolio-card-tag">${w.tag}</div>
