@@ -9,12 +9,14 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg: #f5f3ef;
-    --ink: #1a1814;
-    --muted: #7a756c;
-    --accent: #c8a96e;
-    --border: rgba(26,24,20,.10);
-    --card-bg: #ffffff;
+    --bg: #dcd8d1;
+    --ink: #362d24;
+    --muted: #857c6f;
+    --accent: #b1714b;
+    --accent-green: #39712c;
+    --accent-yellow: #e5d66a;
+    --border: rgba(54,45,36,.14);
+    --card-bg: #f3f1ea;
     --serif: 'Playfair Display', Georgia, serif;
     --sans: 'DM Sans', sans-serif;
     --mono: 'DM Mono', monospace;
@@ -80,7 +82,7 @@
     display: flex; align-items: center; gap: .8rem;
   }
   .hero-scroll::before {
-    content: ''; display: block; width: 40px; height: 1px; background: var(--muted);
+    content: ''; display: block; width: 40px; height: 2px; background: var(--accent-yellow);
   }
 
   /* ── ABOUT ── */
@@ -136,7 +138,7 @@
     cursor: pointer; color: var(--muted); transition: all .2s; border-radius: 2px;
   }
   .filter-btn:hover, .filter-btn.active {
-    background: var(--ink); color: var(--bg); border-color: var(--ink);
+    background: var(--accent-green); color: #f3f1ea; border-color: var(--accent-green);
   }
   .portfolio-grid {
     display: grid;
@@ -385,7 +387,7 @@
   <p class="section-label">Experience</p>
   <div class="timeline">
     <div class="timeline-item">
-      <div class="timeline-date">Jan 2024 – Now</div>
+      <div class="timeline-date">Jan 2025 – Jun 2026</div>
       <div class="timeline-content">
         <h3>Graphic Designer</h3>
         <div class="org">IRIS GOLD CO., LTD</div>
