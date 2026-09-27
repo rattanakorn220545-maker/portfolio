@@ -387,6 +387,14 @@
   <p class="section-label">Experience</p>
   <div class="timeline">
     <div class="timeline-item">
+      <div class="timeline-date">Jul 2026 – Present</div>
+      <div class="timeline-content">
+        <h3>Graphic Designer</h3>
+        <div class="org">THAI STAINLESS STEEL COMPANY LIMITED</div>
+        <p>Thai Stainless Steel Co., Ltd. specializes in household products, including kitchenware and small home appliances. As a Graphic Designer, I create visual content for social media and develop design materials for offline marketing and promotional campaigns.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
       <div class="timeline-date">Jan 2025 – Jun 2026</div>
       <div class="timeline-content">
         <h3>Graphic Designer</h3>
@@ -425,6 +433,7 @@
 <section id="portfolio">
   <p class="section-label">Selected Works</p>
   <div class="filter-bar">
+    <button class="filter-btn" data-filter="seagull">Seagull Graphic</button>
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="graphic">Graphic</button>
     <button class="filter-btn" data-filter="vdo">VDO</button>
@@ -595,6 +604,45 @@
 
   /* ── Portfolio data ── */
   const works = [
+    // SEAGULL GRAPHIC
+    { title: 'Seagull1', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1CiNLre0rAL-zLlqEinyyADPp_qx9etAD&sz=w800', link: 'https://drive.google.com/file/d/1CiNLre0rAL-zLlqEinyyADPp_qx9etAD/view' },
+    { title: 'Seagull2', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1Ty8K8M0BNsqzzQW8Acaj4TVLyw652gaC&sz=w800', link: 'https://drive.google.com/file/d/1Ty8K8M0BNsqzzQW8Acaj4TVLyw652gaC/view' },
+    { title: 'Seagull3', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=18qdmNvTwKG7dLMj9-uGJDXru_6jWc1ZI&sz=w800', link: 'https://drive.google.com/file/d/18qdmNvTwKG7dLMj9-uGJDXru_6jWc1ZI/view' },
+    { title: 'Seagull4', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1RVgk9_8RjKeXysKKGCVDhaOO3VOjpT6H&sz=w800', link: 'https://drive.google.com/file/d/1RVgk9_8RjKeXysKKGCVDhaOO3VOjpT6H/view' },
+    { title: 'Seagull5', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1UPLaRdhoRECPRMMpBbEBwvL2Q8cmXYpM&sz=w800', link: 'https://drive.google.com/file/d/1UPLaRdhoRECPRMMpBbEBwvL2Q8cmXYpM/view' },
+    { title: 'Seagull6', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1Yk5tisfjTISIadBTfbkzOl_dj9JMAAh1&sz=w800', link: 'https://drive.google.com/file/d/1Yk5tisfjTISIadBTfbkzOl_dj9JMAAh1/view' },
+    { title: 'Seagull7', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1lJ6IKr2mHp4DpF9tWGhRgF3-gM0n09kb&sz=w800', link: 'https://drive.google.com/file/d/1lJ6IKr2mHp4DpF9tWGhRgF3-gM0n09kb/view' },
+    { title: 'Seagull8', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1bM3aJ59ER1G7lNHmp7h9-U-vom0BRFqO&sz=w800', link: 'https://drive.google.com/file/d/1bM3aJ59ER1G7lNHmp7h9-U-vom0BRFqO/view' },
+    { title: 'Seagull9', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1ftqfpF3OQLXOd6xaRM0K74xLdmHRjawf&sz=w800', link: 'https://drive.google.com/file/d/1ftqfpF3OQLXOd6xaRM0K74xLdmHRjawf/view' },
+    { title: 'Seagull10', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1MLxvStPRhb2qYCtY2bCVbBIvi1kjBSLg&sz=w800', link: 'https://drive.google.com/file/d/1MLxvStPRhb2qYCtY2bCVbBIvi1kjBSLg/view' },
+    { title: 'Seagull11', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1lwOHLDy7SHp6vKyKElxshDQs14NAzSHK&sz=w800', link: 'https://drive.google.com/file/d/1lwOHLDy7SHp6vKyKElxshDQs14NAzSHK/view' },
+    { title: 'Seagull12', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1_-axRfU2ELdlZBTIlgL5EHCXMi29SlwC&sz=w800', link: 'https://drive.google.com/file/d/1_-axRfU2ELdlZBTIlgL5EHCXMi29SlwC/view' },
+    { title: 'Seagull13', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1xFf1Ad_b_9fk3ae8pWeSx5o-rHa7nWmI&sz=w800', link: 'https://drive.google.com/file/d/1xFf1Ad_b_9fk3ae8pWeSx5o-rHa7nWmI/view' },
+    { title: 'Seagull14', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1OOASHKevmOWpj1UtLZKFYLs5Iq4hc_gl&sz=w800', link: 'https://drive.google.com/file/d/1OOASHKevmOWpj1UtLZKFYLs5Iq4hc_gl/view' },
+    { title: 'Seagull15', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=16eVjVXMCMwledxkuoW-gC_a387eTq8ww&sz=w800', link: 'https://drive.google.com/file/d/16eVjVXMCMwledxkuoW-gC_a387eTq8ww/view' },
+    { title: 'Seagull16', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1edTLQczFx_ZhUcJJY55WdykAEcr8OadP&sz=w800', link: 'https://drive.google.com/file/d/1edTLQczFx_ZhUcJJY55WdykAEcr8OadP/view' },
+    { title: 'Seagull17', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1KpeFhgpldU1bQhb7v4UBIQ1YMa3vWws3&sz=w800', link: 'https://drive.google.com/file/d/1KpeFhgpldU1bQhb7v4UBIQ1YMa3vWws3/view' },
+    { title: 'Seagull18', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1Wp47i9Mtz2s-_uC02TloTnvdN0PM0f8t&sz=w800', link: 'https://drive.google.com/file/d/1Wp47i9Mtz2s-_uC02TloTnvdN0PM0f8t/view' },
+    { title: 'Seagull19', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1--EVVUq2-1wY42Y43ka0PVnbnF6IpUq5&sz=w800', link: 'https://drive.google.com/file/d/1--EVVUq2-1wY42Y43ka0PVnbnF6IpUq5/view' },
+    { title: 'Seagull20', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1MqGl52ctVNcBnhPoEUmq6-38NifFiVhk&sz=w800', link: 'https://drive.google.com/file/d/1MqGl52ctVNcBnhPoEUmq6-38NifFiVhk/view' },
+    { title: 'Seagull21', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=11wRG8ZIVu5j9i5tDm17jyEAFfRdFRGUf&sz=w800', link: 'https://drive.google.com/file/d/11wRG8ZIVu5j9i5tDm17jyEAFfRdFRGUf/view' },
+    { title: 'Seagull22', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1tVG1Sw9zpf32mAC7799QwhAhYaXhIYjR&sz=w800', link: 'https://drive.google.com/file/d/1tVG1Sw9zpf32mAC7799QwhAhYaXhIYjR/view' },
+    { title: 'Seagull23', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1_02sll78VGHO4-LBas0QM8td4UgX_vey&sz=w800', link: 'https://drive.google.com/file/d/1_02sll78VGHO4-LBas0QM8td4UgX_vey/view' },
+    { title: 'Seagull24', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1tzvEDsg5IcbM8rb5EQZbFUWewN6eyj0m&sz=w800', link: 'https://drive.google.com/file/d/1tzvEDsg5IcbM8rb5EQZbFUWewN6eyj0m/view' },
+    { title: 'Seagull25', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1Kql9l-aPqrfbWsFQVdpda4XhGD22TAyH&sz=w800', link: 'https://drive.google.com/file/d/1Kql9l-aPqrfbWsFQVdpda4XhGD22TAyH/view' },
+    { title: 'Seagull26', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1MLbp3YLTsTBdAbd71C2vbmqSeM76OO0q&sz=w800', link: 'https://drive.google.com/file/d/1MLbp3YLTsTBdAbd71C2vbmqSeM76OO0q/view' },
+    { title: 'Seagull27', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1p_cltSZt8MK5N2EWHzyzIW_luHYpoLoT&sz=w800', link: 'https://drive.google.com/file/d/1p_cltSZt8MK5N2EWHzyzIW_luHYpoLoT/view' },
+    { title: 'Seagull28', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1ZumZ710vpT-Fzx2ug4NlWRJf9Lxi7EvL&sz=w800', link: 'https://drive.google.com/file/d/1ZumZ710vpT-Fzx2ug4NlWRJf9Lxi7EvL/view' },
+    { title: 'Seagull29', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1HeBi6FuJslI60oLcOvb2t3p23gLUphSA&sz=w800', link: 'https://drive.google.com/file/d/1HeBi6FuJslI60oLcOvb2t3p23gLUphSA/view' },
+    { title: 'Seagull30', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1Nmn1SpVma3YsP04W_ezRobTl5lfqER51&sz=w800', link: 'https://drive.google.com/file/d/1Nmn1SpVma3YsP04W_ezRobTl5lfqER51/view' },
+    { title: 'Seagull31', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1FsrblxVnx57leeFOG1t5A6MVfTc_vwkW&sz=w800', link: 'https://drive.google.com/file/d/1FsrblxVnx57leeFOG1t5A6MVfTc_vwkW/view' },
+    { title: 'Seagull32', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=17zB2etIGHKXS79C4ayouAA6Xvv3sBv0F&sz=w800', link: 'https://drive.google.com/file/d/17zB2etIGHKXS79C4ayouAA6Xvv3sBv0F/view' },
+    { title: 'Seagull33', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1tTQGDw8LYBSTmyK1wEC97QLd0dQ3sqAV&sz=w800', link: 'https://drive.google.com/file/d/1tTQGDw8LYBSTmyK1wEC97QLd0dQ3sqAV/view' },
+    { title: 'Seagull34', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1WVtuoGgX4bjSfRHscKjq2zm5SJKPEoLp&sz=w800', link: 'https://drive.google.com/file/d/1WVtuoGgX4bjSfRHscKjq2zm5SJKPEoLp/view' },
+    { title: 'Seagull35', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1JozdWYldIDA9EpJwKNAIX_KKkHP228si&sz=w800', link: 'https://drive.google.com/file/d/1JozdWYldIDA9EpJwKNAIX_KKkHP228si/view' },
+    { title: 'Seagull36', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1lnCxHsdpZ6p_KroALh9qDHm-Spn1FPS2&sz=w800', link: 'https://drive.google.com/file/d/1lnCxHsdpZ6p_KroALh9qDHm-Spn1FPS2/view' },
+    { title: 'Seagull37', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=1p7qR0yGpSISCDaiA9fd3ymcGJoYsPhqB&sz=w800', link: 'https://drive.google.com/file/d/1p7qR0yGpSISCDaiA9fd3ymcGJoYsPhqB/view' },
+    { title: 'Seagull38', tag: 'Seagull · Graphic', cat: 'seagull', img: 'https://drive.google.com/thumbnail?id=13hNCME5gB-Qxhm7FSc12qQUiO45MmSZ_&sz=w800', link: 'https://drive.google.com/file/d/13hNCME5gB-Qxhm7FSc12qQUiO45MmSZ_/view' },
     // GRAPHIC
     { title: 'Graphic8', tag: '@iris · Graphic', cat: 'graphic', img: 'https://drive.google.com/thumbnail?id=1wqhmiNc_p5-eZKoeYS3VaLoQYMDWFeVW&sz=w800', link: 'https://drive.google.com/file/d/1wqhmiNc_p5-eZKoeYS3VaLoQYMDWFeVW/view' },
     { title: 'Graphic9', tag: '@iris · Graphic', cat: 'graphic', img: 'https://drive.google.com/thumbnail?id=1-Jj6AXUFYGZJB1rQ-fgMHInDqHw1qudf&sz=w800', link: 'https://drive.google.com/file/d/1-Jj6AXUFYGZJB1rQ-fgMHInDqHw1qudf/view' },
